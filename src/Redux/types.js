@@ -1,0 +1,2 @@
+export const ACTIVETRUE = 'APP/ACTIVETRUE'
+export const ACTIVEFALSE = 'APP/ACTIVEFALSE'

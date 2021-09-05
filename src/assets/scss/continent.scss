@@ -1,0 +1,18 @@
+.continent{
+   min-width: 600px;
+   &__title{
+      @include border;
+      margin: 8px 5px 0 5px;
+      padding: 3px 0 3px 5px;
+      font-size: 25px;
+      line-height: 25 / 27  * 100%;
+      background: white;
+      cursor: pointer;
+      &::selection{
+         all:unset
+      }
+   }
+}
+._active{
+   background: $bgcolor;
+}
