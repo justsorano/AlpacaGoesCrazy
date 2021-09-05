@@ -1,5 +1,7 @@
 .earth{
-   margin: 0 0 5px 0;
+   flex: 1 1 50%;
+   max-width: 50%;
+   background: $bgcolor;
    &__content{
    }
 }

@@ -5,7 +5,6 @@ import {closeTest,showTest} from '../Redux/actions'
 const Continent = ({data,closeTest,showTest,Data}) =>{
    const [active,setActive] = useState(false)
    const [styles,setStyles] = useState(['continent__title'])
-
    const activeChange = () => setActive(!active)
    const titleHandler = e =>{
       if(e.target.textContent === Data[Data.length - 1].name){

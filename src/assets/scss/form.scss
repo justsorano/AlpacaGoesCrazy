@@ -1,0 +1,28 @@
+.form{
+   margin: 25px 0 0 0;
+   flex: 1 1 50%;
+   max-width: 50%;
+   &__contant{
+      background: white;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 0 0 0 15px;
+   }
+   &__input{
+      border: 2px solid black;
+      margin: 5px 0 0 0;
+      &:nth-child(1){
+         margin: 0;
+      }
+   }
+   &__submit{
+      margin: 5px 0 0 0;
+      padding: 6px 10px;
+      border: 2px solid black;
+      border-radius: 5px;
+      background: gold;
+   }
+}
