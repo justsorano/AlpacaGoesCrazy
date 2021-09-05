@@ -1,24 +1,13 @@
-import {ACTIVETRUE,ACTIVEFALSE, CLOSE,SHOW} from './types'
-
-export const activeTrue = () =>{
-   return {
-      type:ACTIVETRUE
-   }
-}
-export const activeFalse = () =>{
-   return {
-      type:ACTIVEFALSE
-   }
-}
-export const closeTest = (title) =>{
+import {CLOSE,OPEN} from './types'
+export const closeCollapsing = (title) =>{
    return {
       type:CLOSE,
       payload:title
    }
 }
-export const showTest = (title) =>{
+export const openCollapsing = (title) =>{
    return {
-      type:SHOW,
+      type:OPEN,
       payload:title
    }
 }

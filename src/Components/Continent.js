@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { Region } from './Region'
-import {closeTest,showTest} from '../Redux/actions'
-const Continent = ({data,closeTest,showTest,Data}) =>{
+import {closeCollapsing,openCollapsing} from '../Redux/actions'
+const Continent = ({data,closeCollapsing,openCollapsing,Data}) =>{
    const [active,setActive] = useState(false)
    const [styles,setStyles] = useState(['continent__title'])
    const activeChange = () => setActive(!active)
    const titleHandler = e =>{
       if(e.target.textContent === Data[Data.length - 1].name){
-         closeTest(e.target.textContent)
+         closeCollapsing(e.target.textContent)
       } else {
-         showTest()
+         openCollapsing()
       }
       if(styles.includes('_active')){
          setStyles(['continent__title'])
@@ -33,7 +33,7 @@ const Continent = ({data,closeTest,showTest,Data}) =>{
    )
 }
 const mapDispatchToProsp = ({
-   closeTest,showTest
+   closeCollapsing,openCollapsing
 })
 const mapStateToProps = state =>({
    Data:state.data

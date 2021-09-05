@@ -1,4 +1,4 @@
-import {CLOSE,SHOW} from './types'
+import {CLOSE,OPEN} from './types'
 import dataJSON from '../data.json'
 const initialState = [
    ...dataJSON
@@ -14,7 +14,7 @@ export const dataReducer = (state = initialState,action) =>{
             ]
          }
       }
-      case SHOW:{
+      case OPEN:{
             return [
                ...dataJSON
             ]

@@ -15,6 +15,11 @@ export const Form = () =>{
       e.preventDefault()
       const newArray = {...value}
       console.log(newArray)
+      setValue({
+         continent:'',
+         country:''
+      })
+
    }
    return (
       <div className='form' onSubmit={submitHandler}>
@@ -31,7 +36,7 @@ export const Form = () =>{
             placeholder='Tap country...'
             onChange={inputHandler}
             required/>
-            <button className='form__submit'>push</button>
+            <button className='form__submit' type='submit'>push</button>
          </form>
       </div>
    )
