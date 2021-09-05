@@ -1,5 +1,5 @@
 import React from 'react'
-import {Continent} from './Continent'
+import Continent from './Continent'
 import { connect } from 'react-redux'
 
 const Earth = ({data}) =>{
