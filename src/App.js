@@ -13,7 +13,7 @@ function App({showAlert,hideAlert,alert}) {
   return (
     <div className='app'>
       <div className='app__wrapper'>
-        {alert ? <Alert hideAlert={hideAlert}/> : null}
+        {alert && <Alert hideAlert={hideAlert}/>}
         <Earth/>
         <Form/>
       </div>
