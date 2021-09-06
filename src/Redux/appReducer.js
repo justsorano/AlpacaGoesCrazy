@@ -1,6 +1,5 @@
 import {SHOWALERT,HIDEALERT} from './types'
 const initialState = {
-   active:false,
    alert:false
 }
 export const appReducer = (state = initialState,action) =>{

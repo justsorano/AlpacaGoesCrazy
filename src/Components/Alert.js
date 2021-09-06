@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types'
 const Alert = ({hideAlert}) =>{
    return (
       <div className='alert _legend' >
@@ -10,5 +10,8 @@ const Alert = ({hideAlert}) =>{
          <button onClick={hideAlert}>&times;</button>
       </div>
    )
+}
+Alert.propTypes = {
+   hideAlert: PropTypes.func.isRequired
 }
 export default Alert

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { addData } from '../Redux/actions'
 const Form = ({addData}) =>{
@@ -50,4 +51,7 @@ const Form = ({addData}) =>{
 const mapDispatchToProps = ({
    addData
 })
+Form.propTypes = {
+   addData: PropTypes.func.isRequired
+}
 export default connect(null,mapDispatchToProps)(Form)
