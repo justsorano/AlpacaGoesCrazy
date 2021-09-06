@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-
-export const Form = () =>{
+import { connect } from 'react-redux'
+import { addData } from '../Redux/actions'
+const Form = ({addData}) =>{
    const [value,setValue] = useState({
-      continent:'',
-      country:''
+      name:'',
+      children:''
    })
    const inputHandler = e =>{
       setValue(prev =>({
@@ -13,31 +14,40 @@ export const Form = () =>{
    }
    const submitHandler = e =>{
       e.preventDefault()
-      const newArray = {...value}
-      console.log(newArray)
+      const data = {
+         name :value.name,
+         children:value.children.split(',')
+      }
+      addData(data)
       setValue({
-         continent:'',
-         country:''
+         name:'',
+         children:''
       })
 
    }
    return (
-      <div className='form' onSubmit={submitHandler}>
-         <form className='form__contant'>
+      <div className='form'>
+         <form className='form__contant' onSubmit={submitHandler}>
+         <legend className='form__legend _legend' >This form have two work opportunities: if name match to the nest title then add child to this nest pool and if not match create a new nest (please use comma) to separate words in the children input </legend>
             <input className='form__input'
-            name='continent'
-            value={value.continent}
-            placeholder='Tap continent...'
+            name='name'
+            value={value.name}
+            placeholder='Tap name...'
+            onChange={inputHandler}
+            required
+            />
+            <input className='form__input'
+            name='children'
+            value={value.children}
+            placeholder='Tap children...'
             onChange={inputHandler}
             required/>
-            <input className='form__input'
-            name='country'
-            value={value.country}
-            placeholder='Tap country...'
-            onChange={inputHandler}
-            required/>
-            <button className='form__submit' type='submit'>push</button>
+            <button className='form__submit' type='submit'>Submit</button>
          </form>
       </div>
    )
 }
+const mapDispatchToProps = ({
+   addData
+})
+export default connect(null,mapDispatchToProps)(Form)

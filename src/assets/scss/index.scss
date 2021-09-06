@@ -6,6 +6,19 @@
 @import './continent.scss';
 @import './region.scss';
 @import './form.scss';
+@import './alert.scss';
+._active{
+  background: $bgcolor;
+}
+._legend{
+  line-height: 20 / 15 * 100%;
+  letter-spacing: .2px;
+  font-weight: 600;
+  background: teal;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
 body {
   margin: 0;
   padding: 0;

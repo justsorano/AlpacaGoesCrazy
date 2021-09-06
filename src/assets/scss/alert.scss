@@ -1,0 +1,23 @@
+.alert{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 5px;
+   position: relative;
+   button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 97%;
+      background: $bgcolor;
+      color: $fontcolor;
+      border: 3px solid $bordercolor;
+      border-radius: 5px;
+   } 
+}

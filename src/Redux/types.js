@@ -1,2 +1,5 @@
 export const CLOSE = 'DATA/CLOSE'
 export const OPEN = 'DATA/SHOW'
+export const ADDNEWDATA = 'DATA/ADD'
+export const SHOWALERT = 'APP/SHOWALERT'
+export const HIDEALERT = 'APP/HIDEALERT'

@@ -5,10 +5,13 @@ import {closeCollapsing,openCollapsing} from '../Redux/actions'
 const Continent = ({data,closeCollapsing,openCollapsing,Data}) =>{
    const [active,setActive] = useState(false)
    const [styles,setStyles] = useState(['continent__title'])
+
    const activeChange = () => setActive(!active)
    const titleHandler = e =>{
-      if(e.target.textContent === Data[Data.length - 1].name){
-         closeCollapsing(e.target.textContent)
+      const lastElement = Data[Data.length - 1]
+      const targetContent = e.target.textContent
+      if(targetContent === lastElement.name){
+         closeCollapsing(targetContent)
       } else {
          openCollapsing()
       }
@@ -22,13 +25,11 @@ const Continent = ({data,closeCollapsing,openCollapsing,Data}) =>{
    }
 
    return(
-      <div className='continent' >
-         <div className='continent__contant'>
+      <div className='continent'>
             <h2 className={styles.join(' ')} onClick={titleHandler}>{data.name}</h2>
-            <div className='continent__children'>
-               {data.children ? active && data.children.map(i =><Region key={i} data={i.children}/>) : <div></div>}
-            </div>
-         </div>
+            <ul className='continent__children'>
+               {data.children ? active && data.children.map((i,idx) =><Region key={idx} data={i.children}/>) : <div></div>}
+            </ul>
       </div>
    )
 }
